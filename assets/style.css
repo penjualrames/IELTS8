@@ -304,5 +304,9 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .tab.on, .sub.on { background: var(--c); color: var(--t); }
 .subrow { padding-top: 10px !important; border-top: 2px dashed var(--line); }
 .pagewrap { max-width: 960px; margin: 0 auto; padding: 22px 20px 48px; }
+.soonbtn { display: inline-block; margin-top: 10px; font-family: var(--display); font-weight: 700; font-size: 14px; padding: 5px 14px; border-radius: 999px; border: 2px dashed var(--line); color: var(--muted); }
+.third { padding-top: 8px !important; }
+.box ul.chips { display: flex; }
+.grid4 { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .foot-site { max-width: 960px; margin: 0 auto; padding: 0 20px 32px; color: var(--muted); font-size: 13px; }
 main.pagewrap a:not([class]) { color: var(--blue); }
