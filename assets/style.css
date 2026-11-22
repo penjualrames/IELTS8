@@ -330,7 +330,11 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .rv { border-left: 6px solid var(--orange); display: grid; gap: 10px; }
 .rv-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
 .rv-name { font-family: var(--display); font-size: 18px; }
-.rv-stars { margin-left: auto; color: var(--orange); letter-spacing: 2px; }
+.rv-stars { margin-left: auto; display: inline-flex; align-items: center; gap: 0; letter-spacing: 1px; font-size: 18px; }
+.rv-on { color: var(--orange); }
+.rv-off { color: #D6DBEE; }
+.rv-score { margin-left: 8px; font-family: var(--display); font-size: 15px; color: var(--fg); letter-spacing: 0; }
+.mk .item + p, .mk p + p { margin-top: 4px; }
 .rv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .rv-tag { font-family: var(--display); font-size: 12px; font-weight: 700; padding: 1px 9px; border-radius: 999px; background: var(--bg); border: 2px solid var(--line); }
 .rv-block small { display: block; font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
