@@ -320,5 +320,21 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .acc-bar button { font: inherit; font-size: 13px; font-weight: 600; color: var(--fg); background: var(--surface); border: 2px solid var(--line); border-radius: 999px; padding: 3px 12px; cursor: pointer; }
 .acc-bar button:hover { border-color: var(--blue); }
 @media (prefers-reduced-motion: reduce) { .acc > .acc-h::after { transition: none; } }
+.rv-tools { display: grid; gap: 10px; }
+.rv-btns { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.rv-link { font-weight: 600; color: var(--blue); }
+.rv-filter { display: flex; flex-wrap: wrap; gap: 6px; }
+.rv-filter button { font: inherit; font-size: 13px; font-weight: 600; color: var(--fg); background: var(--surface); border: 2px solid var(--line); border-radius: 999px; padding: 3px 12px; cursor: pointer; }
+.rv-filter button[aria-pressed="true"] { background: var(--orange); border-color: var(--orange); color: var(--on-strong); }
+.rv-list { display: grid; gap: 14px; }
+.rv { border-left: 6px solid var(--orange); display: grid; gap: 10px; }
+.rv-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.rv-name { font-family: var(--display); font-size: 18px; }
+.rv-stars { margin-left: auto; color: var(--orange); letter-spacing: 2px; }
+.rv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.rv-tag { font-family: var(--display); font-size: 12px; font-weight: 700; padding: 1px 9px; border-radius: 999px; background: var(--bg); border: 2px solid var(--line); }
+.rv-block small { display: block; font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.rv-block p { margin: 2px 0 0 !important; white-space: pre-line; }
+.rv-empty { padding: 18px; border: 3px dashed var(--line); border-radius: 14px; color: var(--muted); text-align: center; }
 .foot-site { max-width: 960px; margin: 0 auto; padding: 0 20px 32px; color: var(--muted); font-size: 13px; }
 main.pagewrap a:not([class]) { color: var(--blue); }
