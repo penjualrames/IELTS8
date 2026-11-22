@@ -308,5 +308,17 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .third { padding-top: 8px !important; }
 .box ul.chips { display: flex; }
 .grid4 { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.acc { padding-block: 14px; }
+.acc > .acc-h { margin: 0; cursor: pointer; user-select: none; justify-content: flex-start; }
+.acc > .acc-h::after { content: "▾"; margin-left: auto; font-size: 18px; color: var(--muted); transition: transform .15s ease; }
+.acc.open > .acc-h::after { transform: rotate(180deg); }
+.acc > .acc-h:hover { color: var(--blue); }
+.acc > .acc-h:focus-visible { outline: 3px solid var(--fg); outline-offset: 4px; border-radius: 4px; }
+.acc-body { margin-top: 12px; }
+.acc-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.acc-bar span { font-size: 13px; font-weight: 600; color: var(--muted); margin-right: 4px; }
+.acc-bar button { font: inherit; font-size: 13px; font-weight: 600; color: var(--fg); background: var(--surface); border: 2px solid var(--line); border-radius: 999px; padding: 3px 12px; cursor: pointer; }
+.acc-bar button:hover { border-color: var(--blue); }
+@media (prefers-reduced-motion: reduce) { .acc > .acc-h::after { transition: none; } }
 .foot-site { max-width: 960px; margin: 0 auto; padding: 0 20px 32px; color: var(--muted); font-size: 13px; }
 main.pagewrap a:not([class]) { color: var(--blue); }
