@@ -344,6 +344,7 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .rv-an-modal .rv-modal-x { margin-left: auto; flex: none; }
 .rv-an-body { overflow-y: auto; padding: 16px 20px 22px; display: grid; gap: 10px; }
 .rv-an-body .wr p { margin: 0; }
+.rv-auto { border-top: 2px dashed var(--line); padding-top: 8px; margin: 4px 0 0; }
 .rv-an-wait { margin: 6px 0 0; border-top: 2px dashed var(--line); padding-top: 10px; }
 .rv-an-d > .wr p { margin: 0; }
 .rv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
