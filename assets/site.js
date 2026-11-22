@@ -1,6 +1,38 @@
 // IELTS Band 8 site
 (function () {
 
+  // Study review form in a pop-up window
+  var FORM_EMBED = "https://docs.google.com/forms/d/e/1FAIpQLSdn3fUCmdi7XBlItzyyNMQXaLn5pvVI-F_jIH95HKlynCOrYw/viewform?embedded=true";
+  var modal = null;
+  function closeModal() {
+    if (!modal) return;
+    modal.hidden = true; document.body.style.overflow = '';
+    if (window.__rvReload) setTimeout(window.__rvReload, 1500);
+  }
+  function openModal(fallback) {
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.className = 'rv-modal';
+      modal.setAttribute('role', 'dialog');
+      modal.setAttribute('aria-modal', 'true');
+      modal.setAttribute('aria-label', 'Fill study review');
+      modal.innerHTML = '<div class="rv-modal-box"><div class="rv-modal-head"><b>Study review</b><a class="rv-modal-new" target="_blank" rel="noopener">Buka di tab baru</a><button type="button" class="rv-modal-x" aria-label="Tutup">×</button></div><iframe title="Study review form"></iframe></div>';
+      modal.querySelector('.rv-modal-new').href = fallback;
+      modal.querySelector('iframe').src = FORM_EMBED;
+      modal.addEventListener('click', function (e) { if (e.target === modal || e.target.closest('.rv-modal-x')) closeModal(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && modal && !modal.hidden) closeModal(); });
+      document.body.appendChild(modal);
+    }
+    modal.hidden = false; document.body.style.overflow = 'hidden';
+    modal.querySelector('.rv-modal-x').focus();
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('[data-review-modal]') : null;
+    if (!a) return;
+    e.preventDefault();
+    openModal(a.href);
+  });
+
   // Accordion: every content box with a title collapses under its title
   var panel = document.querySelector('main .panel');
   if (panel) {
