@@ -336,7 +336,14 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .rv-score { margin-left: 8px; font-family: var(--display); font-size: 15px; color: var(--fg); letter-spacing: 0; }
 .mk .item + p, .mk p + p { margin-top: 4px; }
 .rv-an { font-family: var(--display); font-size: 17px; margin: 8px 0 0; padding: 4px 12px; background: var(--yellow); color: var(--fg); border-radius: 8px; justify-self: start; }
-.rv-an ~ .rv-an { margin-top: 18px; }
+.rv-an-d { margin-top: 6px; border-top: 2px dashed var(--line); padding-top: 10px; }
+.rv-an-d > summary { cursor: pointer; font-family: var(--display); font-weight: 700; color: #fff; background: var(--blue); display: inline-block; padding: 6px 14px; border-radius: 999px; list-style: none; }
+.rv-an-d > summary::-webkit-details-marker { display: none; }
+.rv-an-d > summary::after { content: " ▾"; }
+.rv-an-d[open] > summary::after { content: " ▴"; }
+.rv-an-d[open] > summary { margin-bottom: 12px; }
+.rv-an-wait { margin: 6px 0 0; border-top: 2px dashed var(--line); padding-top: 10px; }
+.rv-an-d > .wr p { margin: 0; }
 .rv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .rv-tag { font-family: var(--display); font-size: 12px; font-weight: 700; padding: 1px 9px; border-radius: 999px; background: var(--bg); border: 2px solid var(--line); }
 .rv-block small { display: block; font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
