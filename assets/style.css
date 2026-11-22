@@ -335,6 +335,8 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .rv-off { color: #D6DBEE; }
 .rv-score { margin-left: 8px; font-family: var(--display); font-size: 15px; color: var(--fg); letter-spacing: 0; }
 .mk .item + p, .mk p + p { margin-top: 4px; }
+.rv-an { font-family: var(--display); font-size: 17px; margin: 8px 0 0; padding: 4px 12px; background: var(--yellow); color: var(--fg); border-radius: 8px; justify-self: start; }
+.rv-an ~ .rv-an { margin-top: 18px; }
 .rv-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .rv-tag { font-family: var(--display); font-size: 12px; font-weight: 700; padding: 1px 9px; border-radius: 999px; background: var(--bg); border: 2px solid var(--line); }
 .rv-block small { display: block; font-family: var(--display); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
