@@ -367,6 +367,12 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .sh-menu { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
 .sh.sh-min .sh-menu { display: none; }
 .sh.sh-min .sh-in { padding-bottom: 12px; }
+.codes-h { font-family: var(--display); font-size: 19px; margin: 0 0 10px; }
+.codes-g { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 10px; }
+.code-i { border: 2px solid var(--line); border-radius: 12px; padding: 10px 12px; min-width: 0; }
+.code-n { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.code-i p { margin: 6px 0 0; font-size: 15px; color: var(--muted); }
+b.code { display: inline-block; min-width: 3.2em; text-align: center; font-family: var(--display); font-size: 14px; background: var(--c); color: var(--t); padding: 2px 8px; border-radius: 999px; }
 .sheets { display: grid; gap: 16px; }
 .sheets .sheet { display: block; width: 100%; height: auto; border: 2px solid var(--line); border-radius: 10px; background: #fff; }
 .notes-frame { border: 2px solid var(--line); border-radius: 14px; overflow: hidden; background: #EEF2F6; }
