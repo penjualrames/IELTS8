@@ -361,6 +361,8 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .rv-modal-x:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
 .rv-modal iframe { flex: 1; width: 100%; border: 0; background: #FFFFFF; }
 @media (max-width: 560px) { .rv-modal { padding: 8px; } .rv-modal-box { height: 94vh; } }
+.sheets { display: grid; gap: 16px; }
+.sheets .sheet { display: block; width: 100%; height: auto; border: 2px solid var(--line); border-radius: 10px; background: #fff; }
 .notes-frame { border: 2px solid var(--line); border-radius: 14px; overflow: hidden; background: #EEF2F6; }
 .notes-frame iframe { display: block; width: 100%; height: min(80vh, 1100px); min-height: 520px; border: 0; }
 .foot-site { max-width: 960px; margin: 0 auto; padding: 0 20px 32px; color: var(--muted); font-size: 13px; }
