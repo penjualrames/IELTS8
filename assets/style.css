@@ -361,6 +361,12 @@ a.tab, a.sub { text-decoration: none; display: inline-flex; align-items: center;
 .rv-modal-x:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
 .rv-modal iframe { flex: 1; width: 100%; border: 0; background: #FFFFFF; }
 @media (max-width: 560px) { .rv-modal { padding: 8px; } .rv-modal-box { height: 94vh; } }
+.sh-top { display: flex; align-items: center; gap: 12px; }
+.sh-toggle { margin-left: auto; font: inherit; font-family: var(--display); font-weight: 700; font-size: 14px; color: var(--fg); background: var(--yellow); border: 2px solid var(--fg); border-radius: 999px; padding: 4px 14px; cursor: pointer; }
+.sh-toggle:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.sh-menu { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.sh.sh-min .sh-menu { display: none; }
+.sh.sh-min .sh-in { padding-bottom: 12px; }
 .sheets { display: grid; gap: 16px; }
 .sheets .sheet { display: block; width: 100%; height: auto; border: 2px solid var(--line); border-radius: 10px; background: #fff; }
 .notes-frame { border: 2px solid var(--line); border-radius: 14px; overflow: hidden; background: #EEF2F6; }

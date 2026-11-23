@@ -1,6 +1,21 @@
 // IELTS Band 8 site
 (function () {
 
+  // Hide / show the top menu (remembered per browser)
+  (function () {
+    var sh = document.querySelector('.sh'), btn = sh && sh.querySelector('.sh-toggle');
+    if (!btn) return;
+    function set(min, save) {
+      sh.classList.toggle('sh-min', min);
+      btn.setAttribute('aria-expanded', String(!min));
+      btn.textContent = min ? 'Tampilkan menu ▾' : 'Sembunyikan menu ▴';
+      if (save) { try { localStorage.setItem('ielts8-menu-min', min ? '1' : '0'); } catch (e) {} }
+    }
+    var saved = null; try { saved = localStorage.getItem('ielts8-menu-min'); } catch (e) {}
+    set(saved === '1', false);
+    btn.addEventListener('click', function () { set(!sh.classList.contains('sh-min'), true); });
+  })();
+
   // Study review form in a pop-up window
   var FORM_EMBED = "https://docs.google.com/forms/d/e/1FAIpQLSdn3fUCmdi7XBlItzyyNMQXaLn5pvVI-F_jIH95HKlynCOrYw/viewform?embedded=true";
   var modal = null;
